@@ -1,0 +1,12 @@
+services:
+  analysis-app:
+    image: chifameissa/tp04-analysis:v1
+    container_name: tp04-compose-container
+    ports:
+      - "8005:5000"
+    networks:
+      - my-data-network
+
+networks:
+  my-data-network:
+    external: true
